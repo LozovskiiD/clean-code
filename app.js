@@ -18,7 +18,7 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-        listItem.classList.add('li-tasks')
+        listItem.classList.add("li-tasks")
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -29,32 +29,32 @@ var createNewTaskElement=function(taskString){
    
     //button.edit
     var editButton=document.createElement("button");//edit button
-    editButton.classList.add('button-task')  
-    console.log('asdfasdfasdf')
+    editButton.classList.add("button-task")  
+  
     //button.delete
     var deleteButton=document.createElement("button");//delete button
-    deleteButton.classList.add('button-task')
+    deleteButton.classList.add("button-task")
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
-    label.classList.add('label-task')
+    label.className="task";
+    label.classList.add("label-task")
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    checkBox.classList.add('check-task')
+    checkBox.classList.add("check-task")
     editInput.className="task";
-    editInput.classList.add('text-task')
+    editInput.classList.add("text-task")
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.classList.add('edit')
+    editButton.classList.add("edit")
    // editButton.className="edit";
 
   //  deleteButton.className="delete";
-    deleteButton.classList.add('delete')
+    deleteButton.classList.add("delete")
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.classList.add('task-img')
+    deleteButtonImg.classList.add("task-img")
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -92,7 +92,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
+    var editInput=listItem.querySelector("input[type=text]");
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
