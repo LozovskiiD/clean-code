@@ -19,7 +19,7 @@ body {
   text-align: right;
 }
 
-.wrap-matrix img {
+.img-matrix {
   width: 100%;
 }
 
@@ -44,7 +44,7 @@ body {
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .task-row-wrapper {
@@ -148,19 +148,14 @@ body {
   width: 226px;
 }
 
-.delete img {
+.img-task {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete img:hover {
+.img-task:hover {
   transform: rotateZ(0);
-}
-
-#completed-tasks .task {
-  text-decoration: line-through;
-  color: #888;
 }
 
 .ul-tasks .li-tasks .text-task {
@@ -173,6 +168,6 @@ body {
   width: 224px;
 }
 
-.ul-tasks .edit-mode label {
+.ul-tasks .edit-mode .label-task {
   display: none;
 }

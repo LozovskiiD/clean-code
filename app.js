@@ -29,15 +29,16 @@ var createNewTaskElement=function(taskString){
    
     //button.edit
     var editButton=document.createElement("button");//edit button
-    editButton.classList.add('button-task')  
-    console.log('asdfasdfasdf')
+    editButton.classList.add('button-task')     
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     deleteButton.classList.add('button-task')
     var deleteButtonImg=document.createElement("img");//delete button image
-
+   
     label.innerText=taskString;
     label.className='task';
+    label.classList.add('label-task')   
+
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -54,6 +55,8 @@ var createNewTaskElement=function(taskString){
     deleteButton.classList.add('delete')
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
+    deleteButtonImg.classList.add("img-button")
+    deleteButtonImg.classList.add("img-task")
 
 
     //and appending.
@@ -133,7 +136,6 @@ var taskCompleted=function(){
     bindTaskEvents(listItem, taskIncomplete);
 
 }
-
 
 var taskIncomplete=function(){
     console.log("Incomplete Task...");
